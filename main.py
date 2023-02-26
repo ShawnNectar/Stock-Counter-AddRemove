@@ -14,15 +14,16 @@ estoque = {
 app.layout = html.Div([
     html.H1('Stock'),
     html.P(id='banana-counter', children=f'Quantity of bananas: {estoque["banana"]}.'),
-    html.Button('Adicionar 1 banana', id='banana-add'),
-    html.Button('Subtrair 1 banana', id='banana-sub'),
+    html.Button('Add 1 banana', id='banana-add', style={'backgroundColor': '#00303d', 'color':'white'}),
+    html.Button('Sub 1 banana', id='banana-sub', style={'backgroundColor': '#00303d', 'color':'white'}),
     html.P(id='maça-counter', children=f'Quantity of apples: {estoque["maça"]}.'),
-    html.Button('Adicionar 1 maçã', id='maça-add'),
-    html.Button('Subtrair 1 maçã', id='maça-sub'),
+    html.Button('Add 1 maçã', id='maça-add',style={'backgroundColor': '#00303d', 'color':'white'}),
+    html.Button('Sub 1 maçã', id='maça-sub', style={'backgroundColor': '#00303d', 'color':'white'}),
     html.P(id='uva-counter', children=f'Quantity of grapes: {estoque["uva"]}.'),
-    html.Button('Adicionar 1 uva', id='uva-add'),
-    html.Button('Subtrair 1 uva', id='uva-sub'),
-])
+    html.Button('Add 1 uva', id='uva-add', style={'backgroundColor': '#00303d', 'color':'white'}),
+    html.Button('Sub 1 uva', id='uva-sub', style={'backgroundColor': '#00303d', 'color':'white'}),
+
+], style={'color':'black'})
 
 @app.callback(
     Output('banana-counter', 'children'),
